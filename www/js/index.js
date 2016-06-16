@@ -1,1 +1,1 @@
-angular.module('MyApp',['$http']);
+angular.module('MyApp',[]);
