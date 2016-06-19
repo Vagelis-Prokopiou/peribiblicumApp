@@ -10,34 +10,33 @@
     <meta http-equiv="Content-Security-Policy"
           content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    <title>Hello World</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="controllers/mainCtrl.js"></script>
+    <title>Peribilicum App</title>
 </head>
 
 <body ng-app="MyApp">
-<div class="header" ng-controller="headerCtrl">
-    <h1>Angular App</h1>
-    <form name="myForm">
-        <label>Email:
-            <input type="email" name="input" ng-model="email.text" ng-required="true">
-        </label>
-        <div role="alert">
-            <span class="error" ng-show="myForm.input.$error.email">Not valid email!</span>
-            <span class="error" ng-show="myForm.input.$error.maxlength">Not valid email!</span>
-            <span class="error" ng-show="myForm.input.$error.required">It is required!!!!</span>
-        </div>
-    </form>
-    <br>
-    <label>Update the name</label>
-    <input type="text" name="userName"
-           ng-model="name"/>
-    <pre>user.name = <span>{{email.text}}</span></pre>
+<div class="container" ng-controller="mainCtrl">
+    <header class="header">
+        <h1><a href="https://peribiblicum.wordpress.com/">ABOUT THE BIBLE / ΠΕΡΙ ΤΗΣ ΒΙΒΛΟΥ</a></h1>
+    </header>
+
+    <main class="main">
+        <!--<input type="text" ng-model="posts" placeholder="Filter posts">-->
+        <br>
+        <ul>
+            <li ng-repeat="post in posts"><a ng-click="toggleCustom(post.title)" href="">{{post.title}}</a>
+                <div ng-if="post.show"><p>{{post.content}}</p></div>
+            </li>
+            <div><p>{{error}}</p></div>
+        </ul>
+    </main>
+
+    <footer class="footer">
+
+    </footer>
 </div>
-
-
-<script type="text/javascript" src="js/cordova.js"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/angular.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<!--<script type="text/javascript" src="js/cordova.js"></script>-->
 </body>
-
 </html>
