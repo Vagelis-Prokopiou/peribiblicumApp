@@ -5,7 +5,7 @@ angular.module('MyApp', [])
         // while fetching data.
         $scope.loading = true;
 
-        $scope.date = new Date().getFullYear();;
+        $scope.date = new Date().getFullYear();
 
         $http({
             method: 'GET',
@@ -19,6 +19,7 @@ angular.module('MyApp', [])
             $scope.loading = false;
         });
 
+        // See: http://stackoverflow.com/questions/14888822/parse-html-inside-ng-bind-using-angularjs
         $scope.toTrustedHTML = function (html) {
             return $sce.trustAsHtml(html);
         };
@@ -30,6 +31,4 @@ angular.module('MyApp', [])
                 }
             }
         };
-
-
     }]);
