@@ -39,7 +39,7 @@
         </div>
         <br>
         <div class="main-content" ng-repeat="post in posts  | filter:search">
-            <h2 href="" ng-click="toggleCustom(post.title)" ng-bind-html='toTrustedHTML( post.title )'></h2>
+            <h2 ng-click="toggleCustom(post.title)" ng-bind-html='toTrustedHTML( post.title )'></h2>
             <div ng-if="post.show" ng-bind-html='toTrustedHTML( post.content )'></div>
         </div>
         <div><p>{{error}}</p></div>
