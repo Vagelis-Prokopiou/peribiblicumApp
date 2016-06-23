@@ -23,11 +23,12 @@
     </header>
 
     <main class="main">
-        <!--<input type="text" ng-model="posts" placeholder="Filter posts">-->
+        <br>
+        <input type="text" ng-model="search" placeholder="Filter the results">
         <br>
         <ul>
-            <li ng-repeat="post in posts"><a ng-click="toggleCustom(post.title)" href="">{{post.title}}</a>
-                <div ng-if="post.show"><p>{{post.content}}</p></div>
+            <li ng-repeat="post in posts  | filter:search"><a ng-click="toggleCustom(post.title)" href="">{{post.title}}</a>
+                <div ng-if="post.show">{{post.content}}</div>
             </li>
             <div><p>{{error}}</p></div>
         </ul>
