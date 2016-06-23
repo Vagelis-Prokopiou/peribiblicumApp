@@ -19,23 +19,35 @@
 <body ng-app="MyApp">
 <div class="container" ng-controller="mainCtrl">
     <header class="header">
+        <div class="logo">
+            <img ng-src="img/logo.png" alt="Peribiblicum">
+        </div>
         <h1><a href="https://peribiblicum.wordpress.com/">ABOUT THE BIBLE / ΠΕΡΙ ΤΗΣ ΒΙΒΛΟΥ</a></h1>
+        <h4>Στοιχεία υπέρ της αξίας και αξιοπιστίας της Βίβλου</h4>
     </header>
 
     <main class="main">
+        <div class="loading" ng-if="loading">
+            <p>
+                Fetching data. <br>
+                Please wait...
+            </p>
+        </div>
         <br>
-        <input type="text" ng-model="search" placeholder="Filter the results">
+        <div ng-if="!loading">
+            Filter the posts: <input type="text" ng-model="search" placeholder="Search...">
+        </div>
         <br>
-        <ul>
-            <li ng-repeat="post in posts  | filter:search"><a ng-click="toggleCustom(post.title)" href="">{{post.title}}</a>
-                <div ng-if="post.show">{{post.content}}</div>
-            </li>
-            <div><p>{{error}}</p></div>
-        </ul>
+        <div class="main-content" ng-repeat="post in posts  | filter:search">
+            <h2 href="" ng-click="toggleCustom(post.title)" ng-bind-html='toTrustedHTML( post.title )'></h2>
+            <div ng-if="post.show" ng-bind-html='toTrustedHTML( post.content )'></div>
+        </div>
+        <div><p>{{error}}</p></div>
     </main>
 
     <footer class="footer">
-
+        <p>Created by: <a href="http://drupaland.eu/">Drupaland</a></p>
+        <p>{{date}}. All rights reserved.</p>
     </footer>
 </div>
 <!--<script type="text/javascript" src="js/cordova.js"></script>-->
