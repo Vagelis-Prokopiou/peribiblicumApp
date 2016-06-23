@@ -10,7 +10,7 @@ angular.module('MyApp', [])
 
         $http({
             method: 'GET',
-            url: 'https://public-api.wordpress.com/rest/v1.1/sites/peribiblicum.wordpress.com/posts/?number=10&fields=title,content'
+            url: 'https://public-api.wordpress.com/rest/v1.1/sites/peribiblicum.wordpress.com/posts/?number=100&fields=title,content'
         }).then(function successCallback(response) {
             $scope.posts = response.data.posts;
             $scope.loading = false;
