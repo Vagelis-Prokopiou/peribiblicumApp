@@ -5,8 +5,7 @@ angular.module('MyApp', [])
         // while fetching data.
         $scope.loading = true;
 
-        var date = new Date().getFullYear();
-        $scope.date = date;
+        $scope.date = new Date().getFullYear();;
 
         $http({
             method: 'GET',
