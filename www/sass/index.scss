@@ -2,11 +2,11 @@ $blue: #1f567d;
 $white: #fff;
 
 * {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   box-sizing: border-box;
 }
 
-html, body {
+body {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -41,8 +41,12 @@ a {
   }
 }
 
+.container {
+  padding: 0 20px;
+}
+
 .header {
-  padding: 20px;
+  //padding: 20px;
   background-color: $blue;
   a {
     color: $white;
@@ -52,13 +56,12 @@ a {
     max-width: 100%;
     height: auto;
   }
-  .logo {
-    width: 70%;
-    margin: 0 auto;
+  .branding {
+    padding: 0 20px;
   }
 }
 
-.main {
+main {
   width: 70%;
   margin: 0 auto;
   background-color: #fff;
