@@ -28,6 +28,7 @@ var app = angular.module('MyApp', [])
             });
 
             // See: http://stackoverflow.com/questions/14888822/parse-html-inside-ng-bind-using-angularjs
+            // It can also be used as an app.filter
             $scope.toTrustedHTML = function (html) {
                 return $sce.trustAsHtml(html);
             };

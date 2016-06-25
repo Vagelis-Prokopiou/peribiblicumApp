@@ -41,6 +41,20 @@ a {
   }
 }
 
+input[type="text"] {
+  padding-top: 10px;
+  margin-left: 5px;
+  padding-left: 2px;
+  border: none;
+  border-bottom: solid 2px $blue;
+  transition: border 0.3s;
+}
+
+input[type="text"].focus {
+  background: none;
+  border-bottom: solid 2px #969696;
+}
+
 .container {
   padding: 0 20px;
 }
