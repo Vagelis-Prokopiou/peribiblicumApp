@@ -27,4 +27,4 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./www/css'));
 });
 
-gulp.task('default', ['browser-sync']);
+gulp.task('default', ['sass', 'browser-sync']);
