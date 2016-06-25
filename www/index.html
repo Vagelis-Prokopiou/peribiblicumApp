@@ -13,20 +13,21 @@
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="controllers/mainCtrl.js"></script>
+    <script type="text/javascript" src="controllers/footerCtrl.js"></script>
     <title>Peribilicum App</title>
 </head>
 
 <body ng-app="MyApp">
-<div class="container" ng-controller="mainCtrl">
-    <header class="header">
-        <div class="logo">
-            <img ng-src="img/logo.png" alt="Peribiblicum">
-        </div>
-        <h1><a href="https://peribiblicum.wordpress.com/">ABOUT THE BIBLE / ΠΕΡΙ ΤΗΣ ΒΙΒΛΟΥ</a></h1>
-        <h4>Στοιχεία υπέρ της αξίας και αξιοπιστίας της Βίβλου</h4>
-    </header>
+<header class="header">
+    <div class="logo">
+        <img ng-src="img/logo.png" alt="Peribiblicum">
+    </div>
+    <h1><a href="https://peribiblicum.wordpress.com/">ABOUT THE BIBLE / ΠΕΡΙ ΤΗΣ ΒΙΒΛΟΥ</a></h1>
+    <h4>Στοιχεία υπέρ της αξίας και αξιοπιστίας της Βίβλου</h4>
+</header>
 
-    <main class="main">
+<div class="container">
+    <main class="main" ng-controller="mainCtrl">
         <div class="loading" ng-if="loading">
             <p>
                 Fetching data. <br>
@@ -44,12 +45,12 @@
         </div>
         <div><p>{{error}}</p></div>
     </main>
-
-    <footer class="footer">
-        <p>Created by: <a href="http://drupaland.eu/">Drupaland</a></p>
-        <p>{{date}}. All rights reserved.</p>
-    </footer>
 </div>
+
+<footer class="footer" ng-controller="footerCtrl">
+    <p>Created by: <a href="http://drupaland.eu/">Drupaland</a></p>
+    <p>{{date}}. All rights reserved.</p>
+</footer>
 <!--<script type="text/javascript" src="js/cordova.js"></script>-->
 </body>
 </html>

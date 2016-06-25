@@ -1,5 +1,7 @@
-angular.module('MyApp', [])
+var app = angular.module('MyApp', [])
     .controller('mainCtrl', ['$scope', '$http', '$sce', function ($scope, $http, $sce) {
+
+        var rest_api_url = 'https://public-api.wordpress.com/rest/v1.1/sites/peribiblicum.wordpress.com/posts/?number=100&fields=title,content';
 
         // Use the following to show and hide the black overlay
         // while fetching data.
@@ -9,7 +11,7 @@ angular.module('MyApp', [])
 
         $http({
             method: 'GET',
-            url: 'https://public-api.wordpress.com/rest/v1.1/sites/peribiblicum.wordpress.com/posts/?number=100&fields=title,content'
+            url: rest_api_url
         }).then(function successCallback(response) {
             $scope.posts = response.data.posts;
             $scope.loading = false;
