@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.github.Vaggos.phonegap" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>PhoneGap</name>
+    <name>Peribiblicum app</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Read quickly and easily all posts from peribiblicum.wordpress.com.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="drz4007@gmail.com" href="http://apps.drupaland.eu">
+        Vagelis Prokopiou
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
