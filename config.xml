@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.github.Vaggos.phonegap" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Peribiblicum app</name>
+<widget id="com.github.Vaggos./peribiblicumApp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>PeribiblicumApp</name>
     <description>
-        Read quickly and easily all posts from peribiblicum.wordpress.com.
+        An app that helps you stay up to date with peribiblicum.wordpress.com blog. Quick and easy access to all the latest posts!
     </description>
     <author email="drz4007@gmail.com" href="http://apps.drupaland.eu">
         Vagelis Prokopiou
